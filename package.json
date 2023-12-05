@@ -1,0 +1,31 @@
+{
+  "name": "textarea-caret-plus",
+  "version": "0.0.3",
+  "description": "",
+  "type": "module",  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/textarea-caret-plus.js",
+  "types": "./dist/textarea-caret-plus.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/textarea-caret-plus.js",
+      "require": "./dist/textarea-caret-plus.umd.js"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "rollup-plugin-cleanup": "^3.2.1",
+    "vite": "^5.0.4",
+    "vite-plugin-dts": "^3.6.4"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
+}
