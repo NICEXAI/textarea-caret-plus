@@ -73,7 +73,8 @@ export class TextMeasurement {
     const display = this.domMeasurement.getStyle(element, 'display')
     const containerWidth = parseFloat(this.domMeasurement.getStyle(element, 'width'))
     const scrollbarWidth = this.domMeasurement.getScrollbarWidth(element)
-    const contentWidth = containerWidth - scrollbarWidth
+    // Need to add 1px to prevent the last character from being wrapped
+    const contentWidth = containerWidth - scrollbarWidth + 1
 
     let cssText = this.domMeasurement.getCssText(element)
     cssText += `; height: auto; max-height: none; width: ${contentWidth}px; overflow: hidden;`
